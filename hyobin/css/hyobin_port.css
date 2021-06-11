@@ -1,0 +1,46 @@
+/* 포트폴리오 부분 */
+
+/* 위에 설명 */
+#portfolio .port_text{transform: translate(5%,48%);}
+#portfolio .port_ps{ font-size: 1.8rem; color: black;font-weight: 800; }
+@media(max-width: 1280px){
+    #portfolio .port_ps{ font-size: 1.3rem; }
+    #portfolio .port_text{ transform: translate(15%,75%); }
+}
+
+#portfolio .port_text .owl-nav{display: none; }
+
+
+/* display 배경 */
+.port_wrap{position: relative; width: 77%; height: 77%; transform: translate(15%,6%);}
+
+.pc_back{background-image: url(/hyobin/img/pc.png);
+        position: absolute; left: 0; top: 0; padding-bottom: 100%;
+        background-size: 100%; background-repeat: no-repeat; }
+.tablet_back{background-image: url(/hyobin/img/tablet.png);
+        position: absolute; left: 58%; top: 44%; padding-bottom: 100%;
+        background-size: 50%; background-repeat: no-repeat; z-index: 1; }
+
+
+/* pc */
+#portfolio .pc_img{ background-position: center; background-repeat: no-repeat; height: 0;
+                    background-size: 93%; padding-bottom: 100%; transform: translate(0%,-20%);}
+
+#portfolio .pc_img1{ background-image:url(/hyobin/img/pc_hospital.png); }
+#portfolio .pc_img2{ background-image:url(/hyobin/img/pc_awesome.png); }
+#portfolio .pc_img3{ background-image:url(/hyobin/img/pc_unbutter.png); }
+
+
+/* tablet */
+#portfolio .tablet_img1,
+#portfolio .tablet_img2,
+#portfolio .tablet_img3{ background-image:url(/hyobin/img/tablet_hospital.png); background-position: center; background-repeat: no-repeat;
+                        height: 0; background-size: 29%; padding-bottom: 73%; transform: translate(-25.3%,-16%); }
+
+/* owl carousel css 수정 */
+.hyo_Banner .owl-dots{ position: absolute; top: 54.3%; left: 39%; }
+.hyo_Banner .owl-dots .owl-dot span{ width: 50px; }
+.hyo_Banner .owl-dots .owl-dot.active span{ background-color: red; }
+
+.port_wrap .owl-nav .owl-prev{ position: absolute; left: -8%; top: 30%; }
+.port_wrap .owl-nav .owl-next{ position: absolute; right: -8%; top: 30%; }
