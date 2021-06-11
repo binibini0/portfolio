@@ -1,0 +1,163 @@
+@charset "UTF-8";
+@font-face {
+    font-family: 'ghanachoco';
+    src: url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'twaysky';
+    src: url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+*, body{font-family: 'Arita','AritaBold','Buri'!important; }
+
+#wrapper.wrapper{ height: 100vh; }
+@media(min-width: 1200px){
+   body{ overflow: hidden; }
+}
+
+
+
+/* 내 소개 */
+#introduce{ }
+
+/* .hb_story ._3dan{ height: 106px; }
+.hb_story .var_hb{ height: calc(100vh - 206px); }
+.hb_story .hbhb{ height: 100px; } */
+
+#introduce h1, h3{ font-family: 'twaysky'!important; letter-spacing: 0.1rem; }
+#introduce h1{font-size: 4.23rem; }
+@media(max-width: 1280px){
+    #introduce h1 { font-size: 3.6rem;}
+    #introduce .hb_story .var_hb p { margin-bottom: 0.4rem; }
+}
+
+#introduce .hb_story{}
+/* #introduce .hb_story ._3dan{height: 30vh; } */
+/* #introduce .hb_story .t_indent{text-indent: 1rem; } */
+#introduce .hb_story .var_hb strong{line-height: 5; }
+#introduce .hb_story .var_hb p{word-break: keep-all; line-height: 1.9; }
+#introduce ._3dan > h1+div{ position: relative; }
+#introduce h3{font-size: 1.5rem; }
+#introduce h3,.moyang{display: inline-block; }
+#introduce .moyang{ border-style: solid;
+                    border-color: black;
+                    border-radius: 27px;
+                    width: 96px;
+                    position: absolute;
+                    top: 5px; }
+
+#introduce .moyang_l{ border-width: 0 0 0 1px; left: 22%; }
+#introduce .moyang_r{ border-width: 0 1px 0 0; right: 22%; }
+
+#introduce .moyang_l::before,
+#introduce .moyang_r::before{
+                              content: "";
+                              border-width: 1px 0;
+                              border-color: #908e8e;
+                              width: 85px;
+                              position: absolute;
+                              height: 24px;
+                              top: 0;
+                              right: 3px;
+                              border-style: solid;
+                            }
+@media(max-width: 1920px){
+    #introduce .moyang_l::before{ width: 73px; transform: translateX(-30%);}
+    #introduce .moyang_r::before{ width: 73px; }
+}
+@media(max-width: 1770px){
+  #introduce .moyang_l::before{ width: 57px; transform: translateX(-52%);}
+  #introduce .moyang_r::before{ width: 57px; }
+}
+@media(max-width: 1600px){
+  #introduce .moyang{ color: transparent; }
+  #introduce .moyang_l::before{ width: 41px; transform: translateX(-119%);}
+  #introduce .moyang_r::before{ width: 41px; }
+}
+@media(max-width: 1199px){
+  #introduce .moyang{ color: black; }
+  #introduce .moyang_l::before{ width: 124px; transform: translateX(32%); }
+  #introduce .moyang_r::before{ width: 124px; transform: translateX(-4%); }
+}
+
+
+/* 이력서, 아이콘 부분 */
+#introduce .hbhb > a{ box-sizing: border-box; display: inline-block; height: 50px; line-height: 48px; padding: 0 50px;
+                    vertical-align: middle; text-align: center; font-size: 1.5rem; color: #fff; white-space: nowrap;
+                    background: #333; border: 1px solid #333; border-radius: 30px; cursor: pointer; }
+
+#introduce .hbhb .sns a{ color: black; }
+#introduce .hbhb .sns i{ font-size: 3rem; }
+
+
+/* 사진 부분 */
+#hb_photo{}
+.hb_img{}
+.hb_img1,
+.hb_img2,
+.hb_img3{position: relative; background-position: center; background-repeat: no-repeat;
+        height: 0; background-size: 120%; padding-bottom: 100%;}
+.hb_img1{background-image: url(/hyobin/img/art_hyobin.jpeg); }
+.hb_img2{background-image: url(/hyobin/img/hyobin1.jpeg); }
+.hb_img3{background-image: url(/hyobin/img/hyobin3.jpeg); }
+.photo{position: absolute; left: 0; top: 0; padding-bottom: 100%; }
+@media (max-width: 2000px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ padding-bottom: 120%; }
+}
+
+/* 작아졌을때 */
+@media (min-width: 1500px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ background-size: 101%; padding-bottom: 96%; }
+}
+@media (max-width: 1024.98px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ background-size: 70%; padding-bottom: 70%; }
+}
+
+
+
+/* 다이어그램 */
+#diagram .top_text span{font-size: 2.4rem; line-height: 70px;}
+#diagram .top_text strong{font-weight: 900; color: #3b302f; font-size: 3.5rem}
+#diagram .top_text{position: relative;}
+#diagram .top_text .mul {
+                          position: absolute;
+                          top: 0;
+                          left: 28%;
+                          font-size: 4.5rem;
+                          transform: translateY(55%) rotate(12deg);
+                          color: #3b302f;
+                        }
+/* 클떼 */
+@media (min-width: 1025px){
+
+}
+/* 작을때 */
+@media (max-width: 1024.98px){
+    #diagram .top_text .mul{display: none; }
+}
+
+
+/* 상단 스크롤 슬라이드 */
+#topBtn{transition: 0.5s; }
+
+/* 탑버튼 슬라이드되면 나타나기 */
+#topBtn{ position: fixed; left: 100%; bottom: 10%; z-index: 100000;
+					width: 50px; height: 50px;
+					border: none;
+				}
+
+.scroll #topBtn{ transform: translateX(-100%);}
