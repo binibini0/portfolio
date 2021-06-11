@@ -1,7 +1,7 @@
 /* 포트폴리오 부분 */
 
 /* 위에 설명 */
-#portfolio .port_text{transform: translate(5%,48%);}
+#portfolio .port_text{transform: translate(5%,48%); }
 #portfolio .port_ps{ font-size: 1.8rem; color: black;font-weight: 800; }
 @media(max-width: 1280px){
     #portfolio .port_ps{ font-size: 1.3rem; }
