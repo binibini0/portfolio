@@ -1,0 +1,65 @@
+
+
+			$("#hyo_page").slick({
+					slide: 'div',		//슬라이드 되어야 할 태그 ex) div, li
+					infinite : true, 	//무한 반복 옵션
+					slidesToShow : 1,		// 한 화면에 보여질 컨텐츠 개수
+					//slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
+					speed : 300,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+					arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
+					dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
+					appendDots : '.hyo_num',
+					customPaging: function(slider, i) {
+					console.log($(slider.$slides[i]).html());
+					 //return '<button class="tab">' + $(slider.$slides[i]).find('.hb_slick_dot').data('title') + '</button>';
+					 return '<button class="tab"><img src=' + $(slider.$slides[i]).find('.hb_slick_dot').data('title') + '></button>';
+			 },
+					autoplay : true,			// 자동 스크롤 사용 여부
+					autoplaySpeed : 10000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
+					//pauseOnHover : true,		// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
+					//vertical : false,		// 세로 방향 슬라이드 옵션
+					//prevArrow : "<button type='button' class='slick-prev'>Previous</button>",		// 이전 화살표 모양 설정
+					//nextArrow : "<button type='button' class='slick-next'>Next</button>",		// 다음 화살표 모양 설정
+					//dotsClass : "slick-dots", 	//아래 나오는 페이지네이션(점) css class 지정
+					draggable : true, 	//드래그 가능 여부
+
+					// responsive: [ // 반응형 웹 구현 옵션
+					// 	{
+					// 		breakpoint: 960, //화면 사이즈 960px
+					// 		settings: {
+					// 			//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+					// 			slidesToShow:3
+					// 		}
+					// 	},
+					// 	{
+					// 		breakpoint: 768, //화면 사이즈 768px
+					// 		settings: {
+					// 			//위에 옵션이 디폴트 , 여기에 추가하면 그걸로 변경
+					// 			slidesToShow:2
+					// 		}
+					// 	}
+					// ]
+			});
+
+//owl
+			jQuery(".hyo_Banner").owlCarousel({
+				loop:true,
+				margin:0,
+				nav:true,
+				navText: ["이전","다음"],
+			 // navText: ["<img src='/hyobin/img/hyobin1.jpeg'>","<img src='/hyobin/img/hyobin2.jpeg'>"],
+       	items:1,
+        autoplay:true,
+				responsive:{ //반응형에 따른 스타일 옵션
+					0:{
+						items:1, // 모바일
+					},
+					600:{
+						items:1, // 브라우저 600px 이하
+            nav:false,
+					},
+					1024:{
+						items:1, // 브라우저 1024px 이하
+					}
+				}
+			});
