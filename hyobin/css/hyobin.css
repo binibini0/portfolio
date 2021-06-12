@@ -1,10 +1,4 @@
 @charset "UTF-8";
-@font-face {
-    font-family: 'ghanachoco';
-    src: url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 
 
 @font-face {
@@ -15,13 +9,24 @@
 }
 
 
-
 *, body{font-family: 'Arita','AritaBold','Buri'!important; }
+
 
 #wrapper.wrapper{ height: 100vh; }
 @media(min-width: 1200px){
    body{ overflow: hidden; }
 }
+
+/* slick dot _ img 버튼 custom  */
+.hyo_num{ position: absolute; top: 0; right: 0; }
+.hyo_num li{ margin-bottom: 7%; }
+.hyo_num .slick-dots img{ width: 100%; height: 100%; }
+
+.hyo_num .slick-dots button{ border: none; background-image: url(/hyobin/img/hyobin1.jpeg); position: relative; background-position: center; background-repeat: no-repeat;
+        height: 0; background-size: 120%; padding-bottom: 100%; }
+
+
+
 
 
 
@@ -69,6 +74,7 @@
                               right: 3px;
                               border-style: solid;
                             }
+#introduce .moyang_r::before{ right: 6px; }
 @media(max-width: 1920px){
     #introduce .moyang_l::before{ width: 73px; transform: translateX(-30%);}
     #introduce .moyang_r::before{ width: 73px; }
@@ -79,7 +85,7 @@
 }
 @media(max-width: 1600px){
   #introduce .moyang{ color: transparent; }
-  #introduce .moyang_l::before{ width: 41px; transform: translateX(-119%);}
+  #introduce .moyang_l::before{ width: 41px; transform: translateX(-110%);}
   #introduce .moyang_r::before{ width: 41px; }
 }
 @media(max-width: 1199px){

@@ -5,9 +5,14 @@
 					infinite : true, 	//무한 반복 옵션
 					slidesToShow : 1,		// 한 화면에 보여질 컨텐츠 개수
 					//slidesToScroll : 1,		//스크롤 한번에 움직일 컨텐츠 개수
-					speed : 1000,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
+					speed : 300,	 // 다음 버튼 누르고 다음 화면 뜨는데까지 걸리는 시간(ms)
 					arrows : true, 		// 옆으로 이동하는 화살표 표시 여부
 					dots : true, 		// 스크롤바 아래 점으로 페이지네이션 여부
+					appendDots : '.hyo_num', //내가 만든 dots 사용
+					customPaging: function(slider, i) {
+					console.log($(slider.$slides[i]).html());
+					 return '<button class="tab"><img src=' + $(slider.$slides[i]).find('.hb_slick_dot').data('title') + '><div class="hb_dots_name">' + $(slider.$slides[i]).find('.hb_slick_dot').data('name') + '</div></button>';
+			 },
 					autoplay : true,			// 자동 스크롤 사용 여부
 					autoplaySpeed : 10000, 		// 자동 스크롤 시 다음으로 넘어가는데 걸리는 시간 (ms)
 					//pauseOnHover : true,		// 슬라이드 이동	시 마우스 호버하면 슬라이더 멈추게 설정
