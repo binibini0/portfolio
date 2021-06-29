@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+
+@font-face {
+    font-family: 'twaysky';
+    src: url('//cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twaysky.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+*, body{font-family: 'Arita','AritaBold','Buri'!important; }
+a{text-decoration: none;}
+
+
+#wrapper.wrapper{ height: 100vh; }
+@media(min-width: 1200px){
+   body{ overflow: hidden; }
+}
+
+/* slick */
+.slick-initialized .slick-slide{ padding: 50px; }
+.slick-slide{overflow: hidden; }
+
+/* slick dot _ img 버튼 custom  */
+.hyo_num{ position: absolute; top: 0; right: 0; }
+.hyo_num li{ height: calc(100vh / 3); }
+.hyo_num .slick-dots button{ border: none; display: block; height: 100%; padding: 15px 10px; }
+.hyo_num .slick-dots img{ height: 100%; }
+
+.hyo_num .tab{position: relative; }
+.hyo_num li.slick-active .tab1::before,
+.hyo_num li.slick-active .tab2::before,
+.hyo_num li.slick-active .tab3::before{ content: ""; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+                                        font-size: 2rem; background: rgba(0,0,0,0.5);
+                                        width: 100%; height: 100%; }
+.hyo_num li.slick-active .tab1::after,
+.hyo_num li.slick-active .tab2::after,
+.hyo_num li.slick-active .tab3::after{ color: #ffc107; display: block; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%)}
+.hyo_num li.slick-active .tab1::after{ content: "포트폴리오"; }
+.hyo_num li.slick-active .tab2::after{ content: "자기소개"; }
+.hyo_num li.slick-active .tab3::after{ content: "사전인터뷰"; }
+
+
+
+/* slick nav */
+/* #hyo_page .slick-prev{ position: absolute; top: 0; left: 0; } */
+#hyo_page .slick-next{ position: absolute; top: 0; right: 0; }
+
+/* swiper */
+#wrapper .sac{ display: none!important; }
+
+
+
+
+/* 내 소개 */
+#introduce{ }
+
+/* .hb_story ._3dan{ height: 106px; }
+.hb_story .var_hb{ height: calc(100vh - 206px); }
+.hb_story .hbhb{ height: 100px; } */
+
+#introduce h1, h3{ font-family: 'twaysky'!important; letter-spacing: 0.1rem; }
+#introduce h1{font-size: 4.23rem; }
+@media(max-width: 1280px){
+    #introduce h1 { font-size: 3.6rem;}
+    #introduce .hb_story .var_hb p { margin-bottom: 0.4rem; }
+}
+
+#introduce .hb_story{}
+/* #introduce .hb_story ._3dan{height: 30vh; } */
+/* #introduce .hb_story .t_indent{text-indent: 1rem; } */
+#introduce .hb_story .var_hb strong{line-height: 5; }
+#introduce .hb_story .var_hb p{word-break: keep-all; line-height: 1.9; }
+#introduce .var_img img{width: 30px; }
+#introduce .var_img .cafe_img{width: 60px; }
+
+#introduce ._3dan > h1+div{ position: relative; }
+#introduce h3{font-size: 1.5rem; }
+#introduce h3,.moyang{display: inline-block; }
+#introduce .moyang{ border-style: solid;
+                    border-color: black;
+                    border-radius: 27px;
+                    width: 96px;
+                    position: absolute;
+                    top: 5px; }
+
+#introduce .moyang_l{ border-width: 0 0 0 1px; left: 22%; }
+#introduce .moyang_r{ border-width: 0 1px 0 0; right: 22%; }
+
+#introduce .moyang_l::before,
+#introduce .moyang_r::before{
+                              content: "";
+                              border-width: 1px 0;
+                              border-color: #908e8e;
+                              width: 85px;
+                              position: absolute;
+                              height: 24px;
+                              top: 0;
+                              right: 3px;
+                              border-style: solid;
+                            }
+#introduce .moyang_r::before{ right: 6px; }
+@media(max-width: 1920px){
+    #introduce .moyang_l::before{ width: 73px; transform: translateX(-30%);}
+    #introduce .moyang_r::before{ width: 73px; }
+}
+@media(max-width: 1770px){
+  #introduce .moyang_l::before{ width: 57px; transform: translateX(-52%);}
+  #introduce .moyang_r::before{ width: 57px; }
+}
+@media(max-width: 1600px){
+  #introduce .moyang{ color: transparent; }
+  #introduce .moyang_l::before{ width: 41px; transform: translateX(-110%);}
+  #introduce .moyang_r::before{ width: 41px; }
+}
+@media(max-width: 1199px){
+  #introduce .moyang{ color: black; }
+  #introduce .moyang_l::before{ width: 124px; transform: translateX(32%); }
+  #introduce .moyang_r::before{ width: 124px; transform: translateX(-4%); }
+}
+
+
+/* 이력서, 아이콘 부분 */
+.hbhb > a{ box-sizing: border-box; display: inline-block; height: 50px; line-height: 48px; padding: 0 50px;
+                    vertical-align: middle; text-align: center; font-size: 1.5rem; color: #fff; white-space: nowrap;
+                    background: #333; border: 1px solid #333; border-radius: 30px; cursor: pointer; }
+
+#introduce .hbhb .sns a{ color: black; }
+#introduce .hbhb .sns i{ font-size: 3rem; }
+
+
+/* 사진 부분 */
+#hb_photo{}
+.hb_img{}
+.hb_img1,
+.hb_img2,
+.hb_img3{position: relative; background-position: center; background-repeat: no-repeat;
+        height: 0; background-size: 120%; padding-bottom: 100%;}
+.hb_img1{background-image: url(/hyobin/img/art_hyobin.jpeg); }
+.hb_img2{background-image: url(/hyobin/img/hyobin1.jpeg); }
+.hb_img3{background-image: url(/hyobin/img/hyobin3.jpeg); }
+.photo{position: absolute; left: 0; top: 0; padding-bottom: 100%; }
+@media (max-width: 2000px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ padding-bottom: 120%; }
+}
+
+/* 작아졌을때 */
+@media (min-width: 1500px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ background-size: 101%; padding-bottom: 96%; }
+}
+@media (max-width: 1024.98px){
+  .hb_img1,
+  .hb_img2,
+  .hb_img3{ background-size: 70%; padding-bottom: 70%; }
+}
+
+
+.Music a{ color: black; }
+
+
+/* 사전면접 */
+#interview .interview_img img{ width: 500px; }
+/*반응형*/
+#interview p:before{ content: ""; display: block; margin:30px auto; width:50px; height: 2px; background:#222; }
+
+#interview dl{ text-align: left; margin: 40px 0; border-top:2px solid #222 }
+#interview dl dt{ line-height: 3; padding-left: 15px; border-bottom: 1px solid #222; font-size: 20px; font-weight: 600; }
+/* #interview dl dt:before{ content: ""; display: inline-block; background: url(/intro/img/qna.png) no-repeat center center;
+                          width: 50px; height: 50px;  background-size: 45px; } */
+#interview dl dt:after{ font-family: xeicon !important; content: "\e943"; float:right; }
+#interview dl dd{ display: none; padding:30px; background:#fff7de; line-height: 1.8; font-size: 1.1rem; word-break: keep-all; }
+
+/* dt에 클래스 on이 적용되면 그 바로 아래 동생 dd는 화면에 노출된다. */
+#interview  dt.on + dd{ display: block }
+#interview  dt.on:after{ content: "\e946" }
+
+
+
+/* 다이어그램 */
+/* #diagram .top_text span{font-size: 2.4rem; line-height: 70px;}
+#diagram .top_text strong{font-weight: 900; color: #3b302f; font-size: 3.5rem}
+#diagram .top_text{position: relative;}
+#diagram .top_text .mul {
+                          position: absolute;
+                          top: 0;
+                          left: 28%;
+                          font-size: 4.5rem;
+                          transform: translateY(55%) rotate(12deg);
+                          color: #3b302f;
+                        } */
+/* 클때 */
+/* @media (min-width: 1025px){
+
+} */
+/* 작을때 */
+/* @media (max-width: 1024.98px){
+    #diagram .top_text .mul{display: none; }
+} */
+
+
+/* 상단 스크롤 슬라이드 */
+/* #topBtn{transition: 0.5s; } */
+
+/* 탑버튼 슬라이드되면 나타나기 */
+/* #topBtn{ position: fixed; left: 100%; bottom: 10%; z-index: 100000;
+					width: 50px; height: 50px;
+					border: none;
+				}
+
+.scroll #topBtn{ transform: translateX(-100%);} */
+
+
+@charset "UTF-8";
+/* 포트폴리오 부분 */
+
+/* 위에 설명 */
+#portfolio .port_text{ text-align: center; }
+#portfolio .port_ps{ font-size: 1.8rem; color: black;font-weight: 800; }
+@media(max-width: 1670px){
+    #portfolio .port_ps{ font-size: 1.6rem; }
+}
+@media(max-width: 1450px){
+    #portfolio .port_ps{ font-size: 1.4rem; }
+}
+@media(max-width: 1280px){
+    #portfolio .port_ps{ font-size: 1.3rem; }
+}
+
+
+
+/* #portfolio .port_text .owl-nav{display: none; }
+.tablet_back .owl-nav{display: none; } */
+
+/* display 배경 */
+.port_wrap{position: relative; width: 77%; height: 77%; transform: translate(15%,12%);}
+
+.pc_back{background-image: url(/hyobin/img/pc.png);
+        position: absolute; left: 0; top: 0; padding-bottom: 100%;
+        background-size: 100%; background-repeat: no-repeat; }
+.tablet_back{background-image: url(/hyobin/img/tablet.png);
+        position: absolute; left: 58%; top: 44%; padding-bottom: 100%;
+        background-size: 50%; background-repeat: no-repeat; z-index: 1; }
+
+
+/* pc */
+#portfolio .pc_img{ background-position: center; background-repeat: no-repeat; height: 0;
+                    background-size: 93%; padding-bottom: 100%; transform: translate(0%,-20%);}
+
+#portfolio .pc_img1{ background-image:url(/hyobin/img/pc_hospital.png); }
+#portfolio .pc_img2{ background-image:url(/hyobin/img/pc_unbutter.png); }
+#portfolio .pc_img3{ background-image:url(/hyobin/img/pc_awesome.png); }
+#portfolio .pc_img4{ background-image:url(/hyobin/img/pc_dda.png); }
+#portfolio .pc_img5{ background-image:url(/hyobin/img/pc_blog.png); }
+#portfolio .pc_img6{ background-image:url(/hyobin/img/pc_webt.png); }
+
+
+
+/* tablet */
+#portfolio .tablet_img1,
+#portfolio .tablet_img2,
+#portfolio .tablet_img3,
+#portfolio .tablet_img4,
+#portfolio .tablet_img5,
+#portfolio .tablet_img6{ background-image:url(/hyobin/img/tablet_hospital.png); background-position: center; background-repeat: no-repeat;
+                        height: 0; background-size: 29%; padding-bottom: 73%; transform: translate(-25.3%,-16%); }
+
+/* swiper custom nav */
+.hb_custom_ {display: flex; width: 100%; justify-content: space-between; transform: translateY(-382%);}
+.hb_custom_ a{font-size: 2rem;}
+
+/* owl carousel css 수정 */
+/* .hyo_Banner .owl-dots{ position: absolute; top: 62.5%; left: 10%; }
+.hyo_Banner .owl-dots .owl-dot span{ width: 50px; }
+.hyo_Banner .owl-dots .owl-dot.active span{ background-color: red; }
+
+.hyo_Banner .owl-nav { font-size: 3rem; }
+.port_wrap .owl-nav .owl-prev{ position: absolute; left: -8%; top: 30%; }
+.port_wrap .owl-nav .owl-next{ position: absolute; right: -8%; top: 30%; } */
+
+
+.dddddd{height: 100vh;}
+
+/* 사이트 바로가기 버튼 */
+.hyo_but {position: absolute; left: 0; bottom: 9%; }
+.hyo_but a{font-size: 1.8rem; color: black; text-decoration: none; color: white;  }
+.hyo_but a:hover{ color: #f3dd9c; }
+
+
+#portfolio2{}
+
+.Music img{ width: 350px; }
+
+
+/* slick nav */
+#hyo_page .slick-prev{ border: none; background: yellow; margin-left: 15px; display: none;}
+#hyo_page .slick-next{ border: none; background: yellow; }
